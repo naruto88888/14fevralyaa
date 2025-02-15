@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilting Cat</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fcf8ec;
+            ;
+            overflow: hidden;
+        }
+
+        .cats-container {
+            display: flex;
+            gap: 20px;
+            /* Отступ между котами */
+            z-index: 1000;
+        }
+
+        .cat {
+            position: relative;
+            width: 300px;
+            animation: tilt 4s infinite ease-in-out;
+            top: -1600px;
+            left: 562px;
+            z-index: 1000;
+        }
+
+        .cat img {
+            width: 300px;
+            height: auto;
+            z-index: 1000;
+            top: -1600px;
+            left: 562px;
+        }
+
+        .heard img {
+            position: relative;
+            top: 13px;
+            top: -19px;
+            left: -15px;
+            height: auto;
+            z-index: 1999;
+
+        }
+
+        .heard {
+            position: relative;
+            top: 13px;
+            top: -2019px;
+            left: 265px;
+            height: auto;
+            z-index: 999;
+        }
+
+        .stuff-container {
+            display: inline-block;
+            width: 1427px;
+            height: 1011px;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            z-index: -5001;
+        }
+
+        .area {
+            position: absolute;
+            top: 400px;
+            left: 443px;
+            width: 550px;
+            height: 249px;
+            z-index: -1000;
+        }
+
+        .image-container img {
+            object-fit: contain;
+            position: relative;
+            left: -297px;
+            top: -505.15px;
+            width: 2019px;
+            z-index: -5000;
+        }
+
+
+        @keyframes tilt {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+                /* Наклон вправо */
+            }
+
+            50% {
+                transform: rotate(0deg);
+                /* Вернуться в центр */
+            }
+
+            75% {
+                transform: rotate(-5deg);
+                /* Наклон влево */
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .stars,
+        .twinkling {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .stars {
+            background: #000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
+            z-index: -6000;
+        }
+
+        .twinkling {
+            background-image: url(https://i.postimg.cc/CLpNr4PF/twinkling.png);
+            animation: 3s twinkle infinite;
+            animation-timing-function: linear;
+            z-index: -6000;
+        }
+
+        @keyframes twinkle {
+            from {
+                backrgound-position: 0
+            }
+
+            to {
+                background-position: -100px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="stuff-container">
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/naruto88888/14fevralyaa/main/foto/cart.png" alt="non">
+        </div>
+        <div>
+            <div class="cat">
+                <img src="https://raw.githubusercontent.com/naruto88888/14fevralyaa/main/foto/cat.png" alt="Cat">
+            </div>
+        </div>
+        <div class="heard">
+            <img src="https://raw.githubusercontent.com/naruto88888/14fevralyaa/main/foto/heard (1).png" alt="heard">
+            <div class="area"></div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
